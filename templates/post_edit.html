@@ -1,12 +1,12 @@
-{% extends 'default.html' %}
+{% extends 'flatpages/default.html' %}
 
 {% block content %}
-<h1>{{ page_title }}</h1>
+<h1> Статья </h1>
+<hr>
 
-<form action="" method="post" class="my-4">
+<form action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Сохранить" class="btn btn-primary"/>
-    <a class="btn btn-outline-danger" role="button" href="{{ request.path }}">Очистить</a>
+    <input type="submit" value="Save" />
 </form>
-{% endblock content %}
+{% endblock content%}
